@@ -1,0 +1,61 @@
+# 🕶️ THE NETWORK GODFATHER - GLOBAL POLICY CONFIGURATION
+# "The Philosophy of Justice for Network Resources"
+
+project_info:
+  name: "The Network Godfather"
+  origin: "Global_Market"
+  version: "1.0.0"
+  author: "The Godfather"
+
+# --- ⚖️ JUSTICE THRESHOLDS ---
+thresholds:
+
+  min_traffic_utilization: 0.10    # 10% usage means it's a "Ghost Link"
+  
+  observation_period: 15          # days
+  
+  safety_buffer_percentage: 0.20  # Keep 20% for safety
+
+# --- 🛡️ SAFETY PROTOCOLS  ---
+safety:
+
+  observation_period_days: 15
+  
+
+  cool_down_period_days: 10
+  
+
+  auto_liberation_mode: false
+
+# --- 🔋 RESOURCE TYPES & POOLING ---
+
+resources:
+
+  monitor_e1: true
+  monitor_licenses: true
+  monitor_memory: true
+  monitor_power_rsl: true
+  monitor_bandwidth_mhz: true
+
+# --- 🏛️ NODE PRIORITY  ---
+excluded_priorities:
+
+  - "CORE_NODE"
+  - "HOSPITAL"
+  - "MILITARY_ZONE"
+  - "EMERGENCY_BACKBONE"
+
+# --- 📊 LOGGING & DATABASE  ---
+database:
+  type: "sqlite"
+  path: "data/godfather_ledger.db"
+  backup_enabled: true
+
+# --- 📡 VENDOR ADAPTERS  ---
+vendors_supported:
+  - name: "Huawei"
+    protocol: "MML/NCE"
+  - name: "Nokia"
+    protocol: "NetAct"
+  - name: "Ericsson"
+    protocol: "ENM"
